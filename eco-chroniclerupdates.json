@@ -35,7 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "http://nidtoolbox.nidaren.net/download/SQLite.Interop.zip",
-        "UpdateSourceTarget": "/AMP/eco/739590/",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
 		"UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
 		"DeleteAfterExtract": true,
@@ -46,10 +46,24 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "http://nidtoolbox.nidaren.net/download/System.Data.SQLite.zip",
-        "UpdateSourceTarget": "/AMP/eco/739590/",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Mods/MightyMoose/Chronicler/",
 		"UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
 		"DeleteAfterExtract": true,
+		"SkipOnFailure": false
+    },
+	{
+	    "UpdateStageName": "Set Executable Flag - 1",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}SQLite.Interop.dll",
+		"SkipOnFailure": false
+    },
+	{
+	    "UpdateStageName": "Set Executable Flag - 2",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Mods/MightyMoose/Chronicler/System.Data.SQLite.dll",
 		"SkipOnFailure": false
     }
 ]
