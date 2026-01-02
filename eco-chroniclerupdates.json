@@ -31,6 +31,14 @@
         "SkipOnFailure": false
     },
 	{
+        "UpdateStageName": "Make Chronicler Mod Folder",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p {{$FullBaseDir}}Mods/MightyMoose/Chronicler ;\"",
+        "SkipOnFailure": false
+    },
+	{
         "UpdateStageName": "Chronicler Prereq: 1-Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
