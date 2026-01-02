@@ -59,11 +59,19 @@
         "SkipOnFailure": false
     },
 	{
-        "UpdateStageName": "Chronicler Prereq: Perms",
+	    "UpdateStageName": "Set Executable Flag - 1",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; chmod +x SQLite.Interop.dll ; chmod +x System.Data.SQLite.dll\"",
-        "SkipOnFailure": false
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}SQLite.Interop.dll",
+		"SkipOnFailure": false
+    },
+	{
+	    "UpdateStageName": "Set Executable Flag - 2",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullBaseDir}}System.Data.SQLite.dll",
+		"SkipOnFailure": false
     }
+	
+	
 ]
