@@ -29,5 +29,14 @@
         "UpdateSourceArgs": "./eco/739590/Configs/Network.eco.template",
         "OverwriteExistingFiles": false,
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Chronicler Pre-req Config",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"chmod +x /AMP/eco/739590/System.Data.SQLite.dll ; \\chmod +x /AMP/eco/739590/SQLite.Interop.dll\"",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     }
 ]
