@@ -43,7 +43,7 @@
         "UpdateStageName": "Chronicler Prereq: 1-MarkExecutable",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "/AMP/eco/739590/SQLite.Interop.dll",
+        "UpdateSourceArgs": "/AMP/eco/739590/SQLite.Interop.dll"
     },
 	{
         "UpdateStageName": "Chronicler Prereq: 2-Download",
@@ -58,6 +58,6 @@
         "UpdateStageName": "Chronicler Prereq: 1-MarkExecutable",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "/AMP/eco/739590/System.Data.SQLite.dll",
+        "UpdateSourceArgs": "/AMP/eco/739590/System.Data.SQLite.dll"
     }
 ]
