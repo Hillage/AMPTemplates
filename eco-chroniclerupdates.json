@@ -37,13 +37,8 @@
         "UpdateSourceData": "http://nidtoolbox.nidaren.net/download/SQLite.Interop.zip",
         "UpdateSourceTarget": "/AMP/eco/739590/",
 		"UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true
-    },
-	{
-        "UpdateStageName": "Chronicler Prereq: 1-MarkExecutable",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "/AMP/eco/739590/SQLite.Interop.dll"
+        "OverwriteExistingFiles": true,
+		"SkipOnFailure": false
     },
 	{
         "UpdateStageName": "Chronicler Prereq: 2-Download",
@@ -52,12 +47,23 @@
         "UpdateSourceData": "http://nidtoolbox.nidaren.net/download/System.Data.SQLite.zip",
         "UpdateSourceTarget": "/AMP/eco/739590/",
 		"UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+		"SkipOnFailure": false
     },
 	{
-        "UpdateStageName": "Chronicler Prereq: 1-MarkExecutable",
+        "UpdateStageName": "Chronicler Prereq: Cleanup",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "/AMP/eco/739590/System.Data.SQLite.dll"
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash"
+        "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; rm SQLite.Interop.zip ; rm System.Data.SQLite.zip\"",
+        "SkipOnFailure": false
+    },
+	{
+        "UpdateStageName": "Chronicler Prereq: Perms",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash"
+        "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; chmod +x SQLite.Interop.dll ; chmod +x System.Data.SQLite.dll\"",
+        "SkipOnFailure": false
     }
 ]
