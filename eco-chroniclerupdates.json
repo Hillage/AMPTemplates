@@ -54,7 +54,7 @@
         "UpdateStageName": "Chronicler Prereq: Cleanup",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash"
+        "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; rm SQLite.Interop.zip ; rm System.Data.SQLite.zip\"",
         "SkipOnFailure": false
     },
@@ -62,7 +62,7 @@
         "UpdateStageName": "Chronicler Prereq: Perms",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash"
+        "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; chmod +x SQLite.Interop.dll ; chmod +x System.Data.SQLite.dll\"",
         "SkipOnFailure": false
     }
