@@ -38,6 +38,7 @@
         "UpdateSourceTarget": "/AMP/eco/739590/",
 		"UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
+		"DeleteAfterExtract": true,
 		"SkipOnFailure": false
     },
 	{
@@ -48,30 +49,7 @@
         "UpdateSourceTarget": "/AMP/eco/739590/",
 		"UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
-		"SkipOnFailure": false
-    },
-	{
-        "UpdateStageName": "Chronicler Prereq: Cleanup",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd /AMP/eco/739590 ; rm SQLite.Interop.zip ; rm System.Data.SQLite.zip\"",
-        "SkipOnFailure": false
-    },
-	{
-	    "UpdateStageName": "Set Executable Flag - 1",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "{{$FullBaseDir}}SQLite.Interop.dll",
-		"SkipOnFailure": false
-    },
-	{
-	    "UpdateStageName": "Set Executable Flag - 2",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "{{$FullBaseDir}}System.Data.SQLite.dll",
+		"DeleteAfterExtract": true,
 		"SkipOnFailure": false
     }
-	
-	
 ]
